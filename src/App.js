@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import MainMenu from "./components/MainMenu";
+import {HashRouter, Outlet, Route, Routes} from "react-router-dom";
+import * as React from "react";
+import EquationArena from "./components/EquationArena";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <HashRouter>
+            <Routes>
+                <Route path={'/'}>
+                    <Route index element={<MainMenu/>}/>
+                    <Route path={'/EquationArena'} element={<EquationArena/>}/>
+                </Route>
+            </Routes>
+        </HashRouter>
     </div>
   );
 }
