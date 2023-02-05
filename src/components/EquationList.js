@@ -7,7 +7,7 @@ function EquationList({equations}) {
         <div className={"EquationList"}>
             {
                 equations.map((equation, key) => {
-                    return <Equation key={key} a={equation.a} b={equation.b} c={equation.c}/>;
+                    return <Equation key={key} repr={equation.repr} solution={equation.solution}/>;
                 })
             }
         < /div>

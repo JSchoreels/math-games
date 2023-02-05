@@ -1,5 +1,5 @@
-function Equation ({a,b,c}) {
-    return <p>{`${a}x + ${b} = ${c}`}</p>
+function Equation ({repr,solution}) {
+    return <p>{repr}</p>
 }
 
 export default Equation

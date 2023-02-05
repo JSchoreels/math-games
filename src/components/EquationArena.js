@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import EquationList from "./EquationList";
+import {equationGenerator} from "./EquationGenerator";
+
 
 function EquationArena(props) {
     const [equations, setEquations] = useState([])
     const addRandomEquation = () => {
-        setEquations([...equations, {'a':1, 'b':equations.length, 'c':3}])
+        setEquations([...equations, equationGenerator()])
     }
     return (
         <>
