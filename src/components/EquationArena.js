@@ -37,8 +37,9 @@ function EquationArena(props) {
         }
     }, [gameOn]);
 
-    const toggleGeneration = () => {
-        setGameOn(!gameOn);
+    const toggleGeneration = (e) => {
+        setGameOn(true);
+        e.target.disabled(true)
     }
 
     const markForDeletion = (key) => () => {
@@ -55,7 +56,7 @@ function EquationArena(props) {
     return (
         <div className={`EquationArena ${gameOn ? 'active' : ''}`}>
             <h2>Welcome to Equation Arena !</h2>
-            Are you ready ? <button onClick={toggleGeneration}>Let's Go !</button> Score : {score}
+            Are you ready ? <button onClick={toggleGeneration} disabled={gameOn}>Let's Go !</button> Score : {score}
             <div className={"EquationList"}>
                 {
                     equations.map((equation, key) => {
