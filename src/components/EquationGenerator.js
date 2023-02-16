@@ -104,7 +104,7 @@ export function equationGenerator() {
         },
         () => {
             let ca = getRandomInt(1, factor_max)
-            let a = getRandomInt(ca + 1, factor_max)
+            let a = getRandomInt(ca + 1, 2*factor_max)
             let c = a - ca
             let db = ca * getRandomInt(1, factor_max)  // multiple de ca
             let d = getRandomInt(db + 1, db + global_max)

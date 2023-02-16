@@ -39,7 +39,6 @@ function EquationArena(props) {
 
     const toggleGeneration = (e) => {
         setGameOn(true);
-        e.target.disabled(true)
     }
 
     const markForDeletion = (key) => () => {
